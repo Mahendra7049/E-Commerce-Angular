@@ -1,0 +1,69 @@
+
+<div class="row product-detail" *ngIf="productData">
+    <!-- <div class="col-sam-6">
+        <img src="{{productData.image}}" alt="">
+
+    </div> -->
+    <div class="col-sm-6">
+        <!-- <div class="detail">
+            <h1>{{productData.name|titlecase}}</h1>
+            <h3>Price: {{productData.price}}</h3>
+            <div class="color">
+                color:
+                <h5 [style.backgroundColor]="productData.color"  class="product-color"></h5>
+            </div>
+            <h6>Category: {{productData.category|titlecase}}</h6>
+            <h6> description:{{productData.desc|titlecase}}</h6>
+            <button (click)="addToCart()">Add TO Cart</button>
+            <button>Buy Now</button>
+            <button *ngIf="removeCart" class="form-button" (click)=" removeToCart(productData.id)">Remove to Cart</button>
+            <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">Add to Cart</button>
+            <div class="quantity">
+                <button (click)="handleQuant('min')">-</button>
+                <input type="text" value={{productQuantity}}>
+                <button (click)="handleQuant('plus')">+</button>
+            </div>
+
+
+        </div> -->
+        
+  <div class="card">
+    <div class="left">
+      <img src={{productData.image}} alt="shoe">
+      <i class="fa fa-long-arrow-left"></i>
+      <i class="fa fa-long-arrow-right"></i>
+    </div>
+    <div class="right">
+      <div class="product-info">
+        <div class="product-name">
+          <h1>{{productData.name |titlecase}}</h1>
+          <i class="fa fa-search"></i>
+          <i class="fa fa-user"></i>
+          <i class="fa fa-shopping-cart"></i>
+        </div>
+        <div class="details">
+           
+            <h4>Price : <span class="fa fa-dollar"></span>{{productData.price}}</h4>
+            <h6>Category: {{productData.category|titlecase}}</h6>
+
+          <h3>Detail : {{productData.desc |titlecase}}</h3>
+          
+          <!-- <h4 class="dis"><span class="fa fa-dollar"></span>200</h4> -->
+        </div>
+       <h3>color</h3>
+        <h5 [style.backgroundColor]="productData.color"  class="product-color"></h5>
+        <button  class="footi" >Buy Now</button>
+        <!-- <span (click)="addToCart()" class="foot"><i class="fa fa-shopping-cart btn"></i>Add TO Cart</span> -->
+        <button *ngIf="removeCart" class="footi " (click)=" removeToCart(productData.id)">Remove</button>
+            <button *ngIf="!removeCart" class="footi" (click)="addToCart()">Add to Cart</button>
+            <div class="quantity">
+                <button class=" btn" (click)="handleQuant('min')">-</button>
+                <input type="text" value={{productQuantity}}>
+                <button class="btn " (click)="handleQuant('plus')">+</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+</div>
